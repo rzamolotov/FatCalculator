@@ -37,8 +37,8 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,5 m" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gv5-9N-BEk">
-                                                <rect key="frame" x="322" y="0.0" width="39" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,7 m" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gv5-9N-BEk">
+                                                <rect key="frame" x="322.66666666666669" y="0.0" width="38.333333333333314" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -48,13 +48,16 @@
                                             <constraint firstAttribute="height" constant="21" id="ft6-gl-AbR"/>
                                         </constraints>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="95y-dB-JEc">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.7" minValue="0.59999999999999998" maxValue="2.7999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="95y-dB-JEc">
                                         <rect key="frame" x="-2" y="558" width="365" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="S6T-vl-SgV"/>
                                         </constraints>
                                         <color key="minimumTrackTintColor" red="0.50980395079999996" green="0.50588238240000005" blue="0.68235301969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="thumbTintColor" red="0.50980395079999996" green="0.50588238240000005" blue="0.68235301969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="heightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="hBT-ra-1dy"/>
+                                        </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="iDX-YC-SKK">
                                         <rect key="frame" x="0.0" y="618" width="361" height="21"/>
@@ -76,13 +79,16 @@
                                             <constraint firstAttribute="height" constant="21" id="ULF-Ar-pBp"/>
                                         </constraints>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="gOS-h1-WnA">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="20" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="gOS-h1-WnA">
                                         <rect key="frame" x="-2" y="639" width="365" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="6Ey-iL-2xy"/>
                                         </constraints>
                                         <color key="minimumTrackTintColor" red="0.50980395079999996" green="0.50588238240000005" blue="0.68235301969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="thumbTintColor" red="0.50980395079999996" green="0.50588238240000005" blue="0.68235301969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="weightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="QHX-G3-RIk"/>
+                                        </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2b-e9-4Ie">
                                         <rect key="frame" x="0.0" y="699" width="361" height="60"/>
@@ -97,6 +103,9 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="calculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tr5-WE-YBM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -114,6 +123,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MUm-Wj-FLY" secondAttribute="trailing" constant="16" id="mGu-cl-r6e"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="Gv5-9N-BEk" id="629-NS-JWN"/>
+                        <outlet property="heightSlider" destination="95y-dB-JEc" id="JVL-s6-1e8"/>
+                        <outlet property="weightLabel" destination="5zJ-46-XD4" id="Pqv-NL-qjc"/>
+                        <outlet property="weightSlider" destination="gOS-h1-WnA" id="yMl-Gh-9jB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

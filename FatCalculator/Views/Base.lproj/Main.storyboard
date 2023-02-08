@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculate View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FatCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculateViewController" customModule="FatCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,40 +128,44 @@
                         <outlet property="heightSlider" destination="95y-dB-JEc" id="JVL-s6-1e8"/>
                         <outlet property="weightLabel" destination="5zJ-46-XD4" id="Pqv-NL-qjc"/>
                         <outlet property="weightSlider" destination="gOS-h1-WnA" id="yMl-Gh-9jB"/>
+                        <segue destination="7dl-tV-Sgh" kind="presentation" identifier="goToResults" id="B3J-UB-UQV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-167" y="-60"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="OFx-fX-xM3">
             <objects>
-                <viewController id="7dl-tV-Sgh" customClass="ViewController" customModule="FatCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7dl-tV-Sgh" customClass="ResultViewController" customModule="FatCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vhd-fE-Xh8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result_background" translatesAutoresizingMaskIntoConstraints="NO" id="mlM-QF-JGx">
-                                <rect key="frame" x="0.0" y="-2" width="393" height="856"/>
+                                <rect key="frame" x="0.0" y="-2" width="393" height="787"/>
                                 <color key="backgroundColor" red="0.20000001789999999" green="0.34901961679999999" blue="0.54509806630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSB-DA-Yyo">
-                                <rect key="frame" x="16" y="758" width="361" height="60"/>
+                                <rect key="frame" x="16" y="723" width="361" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="iVY-fa-den"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="CALCULATE">
+                                <buttonConfiguration key="configuration" style="plain" title="RECALCULATE">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                     <color key="baseForegroundColor" red="0.50980395079999996" green="0.50588238240000005" blue="0.68235301969999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="7dl-tV-Sgh" eventType="touchUpInside" id="pfE-ap-znC"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AeX-Di-A6k">
-                                <rect key="frame" x="78.666666666666686" y="337.33333333333331" width="236" height="177.66666666666669"/>
+                                <rect key="frame" x="78.666666666666686" y="302.66666666666669" width="236" height="177.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gf-Q8-lOB">
                                         <rect key="frame" x="0.0" y="0.0" width="236" height="42"/>
@@ -176,7 +180,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="EAT SOME MORE SNACKS!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aX-J0-hEd">
-                                        <rect key="frame" x="0.0" y="153.66666666666669" width="236" height="24"/>
+                                        <rect key="frame" x="0.0" y="153.66666666666663" width="236" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -198,6 +202,10 @@
                             <constraint firstItem="mlM-QF-JGx" firstAttribute="trailing" secondItem="A1g-4A-bsv" secondAttribute="trailing" id="wqG-Fy-8pi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adviceLabel" destination="0aX-J0-hEd" id="mRn-dW-G72"/>
+                        <outlet property="bmiLabel" destination="iVT-s3-5Sk" id="jNv-bh-ksP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umk-sb-j4c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

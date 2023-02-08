@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		76A51DF72993548500015031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A51DF62993548500015031 /* AppDelegate.swift */; };
 		76A51DF92993548500015031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A51DF82993548500015031 /* SceneDelegate.swift */; };
-		76A51DFB2993548500015031 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A51DFA2993548500015031 /* ViewController.swift */; };
+		76A51DFB2993548500015031 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A51DFA2993548500015031 /* CalculateViewController.swift */; };
 		76A51DFE2993548500015031 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A51DFC2993548500015031 /* Main.storyboard */; };
 		76A51E002993548700015031 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76A51DFF2993548700015031 /* Assets.xcassets */; };
 		76A51E032993548700015031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A51E012993548700015031 /* LaunchScreen.storyboard */; };
-		76A51E2629942A6600015031 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A51E2529942A6600015031 /* SecondViewController.swift */; };
+		76A51E28299432D300015031 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A51E27299432D300015031 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		76A51DF32993548500015031 /* FatCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FatCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A51DF62993548500015031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76A51DF82993548500015031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		76A51DFA2993548500015031 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76A51DFA2993548500015031 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
 		76A51DFD2993548500015031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76A51DFF2993548700015031 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76A51E022993548700015031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76A51E042993548700015031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76A51E2529942A6600015031 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		76A51E27299432D300015031 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +71,8 @@
 		76A51E0A2993550800015031 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				76A51DFA2993548500015031 /* ViewController.swift */,
-				76A51E2529942A6600015031 /* SecondViewController.swift */,
+				76A51DFA2993548500015031 /* CalculateViewController.swift */,
+				76A51E27299432D300015031 /* ResultViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -157,10 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76A51E2629942A6600015031 /* SecondViewController.swift in Sources */,
-				76A51DFB2993548500015031 /* ViewController.swift in Sources */,
+				76A51DFB2993548500015031 /* CalculateViewController.swift in Sources */,
 				76A51DF72993548500015031 /* AppDelegate.swift in Sources */,
 				76A51DF92993548500015031 /* SceneDelegate.swift in Sources */,
+				76A51E28299432D300015031 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
